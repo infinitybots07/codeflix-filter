@@ -26,4 +26,4 @@ async def c_upload(client, message: Message):
     except Exception as e:
         await msg.edit_text(f"Error: {str(e)}")
 
-#Telegram - @Deendayal_dhakad
+
