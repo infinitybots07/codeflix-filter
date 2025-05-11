@@ -5,7 +5,7 @@
 </h2>
 
 <p align="center">
-  <img src="https://envs.sh/Wdj.jpg">
+  <img src="">
 </p>
 
 _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [ʟᴜᴄʏ ʀᴏʙᴏᴛ](https://t.me/lucy_filter_bot)**_
