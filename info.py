@@ -70,7 +70,7 @@ APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_URI2 = environ.get('DATABASE_URI2', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "yato")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Lucy_files')
 
 # ============================
 # Movie Notification & Update Settings
