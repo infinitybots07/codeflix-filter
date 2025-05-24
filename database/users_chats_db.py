@@ -1,3 +1,4 @@
+
 import motor.motor_asyncio
 from info import *
 import datetime
@@ -34,7 +35,7 @@ class Database:
         self.grp = self.db.groups
         self.users = self.db.uersz
         self.req = self.db.requests
-        self.botcol = self.db["deendayal"]  
+        self.botcol = self.db["codeflix"]  
         self.bot_id_col = self.db["bot_id"] 
 
     async def find_join_req(self, id):
@@ -280,5 +281,3 @@ class Database:
         
 db = Database(DATABASE_URI, DATABASE_NAME)
 db2 = Database(DATABASE_URI2, DATABASE_NAME)
-
-
