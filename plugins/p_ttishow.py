@@ -155,26 +155,26 @@ async def re_enable_chat(bot, message):
     await message.reply("Chat Successfully re-enabled")
 
 
-@Client.on_message(filters.command('stats') & filters.incoming)
+@Client.on_message(filters.command('stats') & filters.user(ADMINS))
 async def get_ststs(bot, message):
-    if message.from_user.id not in ADMINS:  # You need to define ADMINS
-        m=await message.reply_sticker("CAACAgUAAxkBAAJFeWd037UWP-vgb_dWo55DCPZS9zJzAAJpEgACqXaJVxBrhzahNnwSHgQ") 
-        await asyncio.sleep(2)
-        await m.delete()
-        sticker_file_id = "CAACAgUAAxkBAAJFeWd037UWP-vgb_dWo55DCPZS9zJzAAJpEgACqXaJVxBrhzahNnwSHgQ"  # Replace with your sticker file ID
-        d = await message.reply_sticker(sticker=sticker_file_id)
-        await asyncio.sleep(15)
-        await d.delete()
-    else:
-        rju = await message.reply('Fetching stats..')
-        total_users = await db.total_users_count()
-        totl_chats = await db.total_chat_count()
-        files = await Media.count_documents()
-        size = await db.get_db_size()
-        free = 536870912 - size
-        size = get_size(size)
-        free = get_size(free)
-        await rju.edit(script.STATUS_TXT.format(files, total_users, totl_chats, size, free))
+    rju = await message.reply('ᴀᴄᴄᴇꜱꜱɪɴɢ ꜱᴛᴀᴛᴜꜱ ᴅᴇᴛᴀɪʟꜱ...')
+    total_users = await db.total_users_count()
+    totl_chats = await db.total_chat_count()
+    premium = await db.all_premium_users()
+    file = await Media.count_documents()
+    size = await db.get_db_size()
+    free = 536870912 - size
+    size = get_size(size)
+    free = get_size(free)
+    files = await Media2.count_documents()
+    size2 = await db2.get_db_size()
+    free2 = 536870912 - size2
+    size2 = get_size(size2)
+    free2 = get_size(free2)
+    uptime = get_readable_time(time() - botStartTime)
+    ram = psutil.virtual_memory().percent
+    cpu = psutil.cpu_percent()
+    await rju.edit(script.STATUS_TXT.format(total_users, totl_chats, premium, file, size, free, files, size2, free2, uptime, ram, cpu, (int(file)+int(files)) ))
 
 
 @Client.on_message(filters.command('invite') & filters.user(ADMINS))
