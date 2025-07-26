@@ -1663,7 +1663,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.answer(f"⚠️ SOMETHING WENT WRONG \n\n{e}", show_alert=True)
             return
             
-       #@codeflix_bots
+       #@infinity_botzz
     
     elif query.data == "pagesn1":
         await query.answer(text=script.PAGE_TXT, show_alert=True)
@@ -1685,7 +1685,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton(text="💸", callback_data="shortlink_info"),
                     InlineKeyboardButton(text="🖥", callback_data="main"),
                 ],[
-                    InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true&admin=delete_messages+restrict_members+invite_users+manage_chat+change_info+pin_messages+add_admins+manage_video_chats')
                 ],[
                     InlineKeyboardButton('• ᴄᴏᴍᴍᴀɴᴅꜱ •', callback_data='main'),
                     InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data='shortlink_info')
@@ -2043,7 +2043,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('× ᴀʟʟ ᴏᴜʀ ʟɪɴᴋꜱ ×', url="https://t.me/nova_flix")
        ],[
             InlineKeyboardButton('• ɢʀᴏᴜᴘ •', url="t.me/movie7xchat"),
-            InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', url="t.me/codeflix_bots")
+            InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', url="t.me/infinity_botzz")
        ],[
             InlineKeyboardButton('• sᴇʀɪᴇsғʟɪx •', url="https://t.me/webseries_flix"),
             InlineKeyboardButton('• ᴍᴏᴠɪᴇғʟɪx •', url="https://t.me/movieflixspot")

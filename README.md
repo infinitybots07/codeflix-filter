@@ -158,7 +158,7 @@ and more....
 </h3>
 
 <p align="center">
-<a href="https://telegram.me/codeflixsupport"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://telegram.me/+JWsoDEJEB9EyNDU1"><img src="https://img.shields.io/badge/-Support%20Group-blue.svg?style=for-the-badge&logo=Telegram"></a>
 </p>
 <p align="center">
 <a href="https://telegram.me/codeflix_bots"><img src="https://img.shields.io/badge/-Support%20Channel-blue.svg?style=for-the-badge&logo=Telegram"></a>
@@ -170,7 +170,7 @@ and more....
     ─「 ᴄʀᴇᴅɪᴛs 」─
 </h3>
 
-- <b>[ʏᴀᴛᴏ](https://github.com/Codeflix-Bots)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://t.me/cosmic_freak) </b>
+- <b>[ʏᴀᴛᴏ](https://github.com/Codeflix-Bots)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://t.me/infinity_botzz) </b>
 - <b>[ᴅᴇᴇɴᴅᴀʏᴀʟ](https://github.com/Codeflix-Bots)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://github.com/Deendayal403/Deendayal_dhakad) </b>
 - <b>[ʏᴜᴊɪ](https://github.com/Codeflix-Bots)  ➻  [sᴏᴍᴇᴛʜɪɴɢ](https://t.me/nova_flix) </b>
  

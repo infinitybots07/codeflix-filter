@@ -35,12 +35,12 @@ async def start(client, message):
         await message.react(emoji=random.choice(REACTIONS), big=True) 
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-                    InlineKeyboardButton('• ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ᴄʜᴀᴛ •', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('• ᴀᴅᴅ ᴍᴇ ᴛᴏ ᴜʀ ᴄʜᴀᴛ •', url=f'http://t.me/{temp.U_NAME}?startgroup=true&admin=delete_messages+restrict_members+invite_users+manage_chat+change_info+pin_messages+add_admins+manage_video_chats')
                 ],[
-                    InlineKeyboardButton('• ᴍᴀsᴛᴇʀ •', url="https://t.me/cosmic_freak"),
-                    InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', url='https://t.me/codeflixsupport')
+                    InlineKeyboardButton('• ᴍᴀsᴛᴇʀ •', url="https://t.me/infinity_botzz"),
+                    InlineKeyboardButton('• sᴜᴘᴘᴏʀᴛ •', url='https://telegram.me/+JWsoDEJEB9EyNDU1')
                 ],[
-                    InlineKeyboardButton('• ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ •', url="https://t.me/codeflix_bots")
+                    InlineKeyboardButton('• ᴊᴏɪɴ ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ •', url="https://t.me/infinity_botzz")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.GSTART_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup, disable_web_page_preview=True)
@@ -61,7 +61,7 @@ async def start(client, message):
                     InlineKeyboardButton(text="💸", callback_data="shortlink_info"),
                     InlineKeyboardButton(text="🖥", callback_data="main"),
                 ],[
-                    InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true&admin=delete_messages+restrict_members+invite_users+manage_chat+change_info+pin_messages+add_admins+manage_video_chats')
                 ],[
                     InlineKeyboardButton('• ᴄᴏᴍᴍᴀɴᴅꜱ •', callback_data='main'),
                     InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data='shortlink_info')
@@ -127,7 +127,7 @@ async def start(client, message):
                     InlineKeyboardButton(text="💸", callback_data="shortlink_info"),
                     InlineKeyboardButton(text="🖥", callback_data="main"),
                 ],[
-                    InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+                    InlineKeyboardButton('ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ', url=f'http://t.me/{temp.U_NAME}?startgroup=true&admin=delete_messages+restrict_members+invite_users+manage_chat+change_info+pin_messages+add_admins+manage_video_chats')
                 ],[
                     InlineKeyboardButton('• ᴄᴏᴍᴍᴀɴᴅꜱ •', callback_data='main'),
                     InlineKeyboardButton('• ᴇᴀʀɴ ᴍᴏɴᴇʏ •', callback_data='shortlink_info')
@@ -521,7 +521,7 @@ async def start(client, message):
         else:
             chat_id = temp.SHORT.get(user_id)
         settings = await get_settings(chat_id)
-        if not await db.has_premium_access(user_id) and settings['is_shortlink']: #Don't change anything without my permission @cosmic_freak
+        if not await db.has_premium_access(user_id) and settings['is_shortlink']: #Don't change anything without my permission @infinity_botzz
             files_ = await get_file_details(file_id)
             files = files_[0]
             g = await get_shortlink(chat_id, f"https://telegram.me/{temp.U_NAME}?start=file_{file_id}")
