@@ -137,9 +137,9 @@ async def pm_text(bot, message):
 @Client.on_callback_query(filters.regex(r"^reffff"))
 async def refercall(bot, query):
     btn = [[
-        InlineKeyboardButton('invite link', url=f'https://telegram.me/share/url?url=https://t.me/{bot.me.username}?start=reff_{query.from_user.id}&text=Hello%21%20Experience%20a%20bot%20that%20offers%20a%20vast%20library%20of%20unlimited%20movies%20and%20series.%20%F0%9F%98%83'),
+        InlineKeyboardButton('• ɪɴᴠɪᴛᴇ ʟɪɴᴋ •', url=f'https://telegram.me/share/url?url=https://t.me/{bot.me.username}?start=reff_{query.from_user.id}&text=Hello%21%20Experience%20a%20bot%20that%20offers%20a%20vast%20library%20of%20unlimited%20movies%20and%20series.%20%F0%9F%98%83'),
         InlineKeyboardButton(f'⏳ {referdb.get_refer_points(query.from_user.id)}', callback_data='ref_point'),
-        InlineKeyboardButton('Back', callback_data='premium_info')
+        InlineKeyboardButton('ɢᴏ ʙᴀᴄᴋ', callback_data='premium_info')
     ]]
     reply_markup = InlineKeyboardMarkup(btn)
     await bot.edit_message_media(
@@ -1409,10 +1409,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
              ],[
                 InlineKeyboardButton("ᴀʟʀᴇᴀᴅʏ ᴀᴠᴀɪʟᴀʙʟᴇ", callback_data=f"already_available#{from_user}")
              ],[
-                InlineKeyboardButton("Not Released", callback_data=f"Not_Released#{from_user}"),
-                InlineKeyboardButton("Type Correct Spelling", callback_data=f"Type_Correct_Spelling#{from_user}")
+                InlineKeyboardButton("ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ", callback_data=f"Not_Released#{from_user}"),
+                InlineKeyboardButton("ᴛʏᴘᴇ ᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ", callback_data=f"Type_Correct_Spelling#{from_user}")
              ],[
-                InlineKeyboardButton("Not Available In The Hindi", callback_data=f"Not_Available_In_The_Hindi#{from_user}")
+                InlineKeyboardButton("ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ʜɪɴᴅɪ", callback_data=f"Not_Available_In_The_Hindi#{from_user}")
              ]]
         btn2 = [[
                  InlineKeyboardButton("ᴠɪᴇᴡ ꜱᴛᴀᴛᴜꜱ", url=f"{query.message.link}")
@@ -1451,7 +1451,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data.startswith("Not_Released"):
         ident, from_user = query.data.split("#")
         btn = [[
-                InlineKeyboardButton("📌 Not Released 📌", callback_data=f"unalert#{from_user}")
+                InlineKeyboardButton("📌 ɴᴏᴛ ʀᴇʟᴇᴀsᴇᴅ 📌", callback_data=f"unalert#{from_user}")
               ]]
         btn2 = [[
                  InlineKeyboardButton('ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ', url=link.invite_link),
@@ -1474,7 +1474,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data.startswith("Type_Correct_Spelling"):
         ident, from_user = query.data.split("#")
         btn = [[
-                InlineKeyboardButton("♨️ Type Correct Spelling ♨️", callback_data=f"unalert#{from_user}")
+                InlineKeyboardButton("♨️ ᴛʏᴘᴇ ᴄᴏʀʀᴇᴄᴛ sᴘᴇʟʟɪɴɢ ♨️", callback_data=f"unalert#{from_user}")
               ]]
         btn2 = [[
                  InlineKeyboardButton('ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ', url=link.invite_link),
@@ -1497,7 +1497,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data.startswith("Not_Available_In_The_Hindi"):
         ident, from_user = query.data.split("#")
         btn = [[
-                InlineKeyboardButton("⚜️ Not Available In The Hindi ⚜️", callback_data=f"unalert#{from_user}")
+                InlineKeyboardButton("⚜️ ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ɪɴ ʜɪɴᴅɪ ⚜️", callback_data=f"unalert#{from_user}")
               ]]
         btn2 = [[
                  InlineKeyboardButton('ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ', url=link.invite_link),
@@ -1615,15 +1615,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
-                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=lazy_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 🚀", url=lazy_download),  # we download Link
+                                                    InlineKeyboardButton('🖥️ ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', url=lazy_stream)]])  # web stream Link
             )
             lucypro = await query.message.reply_text(
                 text="•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ☠︎⚔",
                 quote=True,
                 disable_web_page_preview=True,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 Fast Download 🚀", url=lazy_download),  # we download Link
-                                                    InlineKeyboardButton('🖥️ Watch online 🖥️', url=lazy_stream)]])  # web stream Link
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🚀 ғᴀsᴛ ᴅᴏᴡɴʟᴏᴀᴅ 🚀", url=lazy_download),  # we download Link
+                                                    InlineKeyboardButton('🖥️ ᴡᴀᴛᴄʜ ᴏɴʟɪɴᴇ 🖥️', url=lazy_stream)]])  # web stream Link
             )  
             
             await asyncio.sleep(DELETE_TIME) 
@@ -2012,15 +2012,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
     
     elif query.data == "group_info":
         buttons = [[
-            InlineKeyboardButton('× ᴀʟʟ ᴏᴜʀ ʟɪɴᴋꜱ ×', url="https://t.me/nova_flix")
+            InlineKeyboardButton('× ᴀʟʟ ᴏᴜʀ ʟɪɴᴋꜱ ×', url="https://t.me/+JWsoDEJEB9EyNDU1")
        ],[
-            InlineKeyboardButton('• ɢʀᴏᴜᴘ •', url="t.me/movie7xchat"),
+            InlineKeyboardButton('• ɢʀᴏᴜᴘ •', url="https://t.me/+YqSLcYCIIKxjODRl"),
             InlineKeyboardButton('• ᴜᴘᴅᴀᴛᴇs •', url="t.me/infinity_botzz")
        ],[
-            InlineKeyboardButton('• sᴇʀɪᴇsғʟɪx •', url="https://t.me/webseries_flix"),
-            InlineKeyboardButton('• ᴍᴏᴠɪᴇғʟɪx •', url="https://t.me/movieflixspot")
+            InlineKeyboardButton('• sᴇʀɪᴇs •', url="https://t.me/+goYMUygBL383ZTc8"),
+            InlineKeyboardButton('• ᴍᴏᴠɪᴇ •', url="https://t.me/+BJfqwUjbkQFmNTU1")
        ],[
-            InlineKeyboardButton('• ᴀɴɪᴍᴇ ᴄʀᴜɪsᴇ •', url="https://t.me/Anime_Cruise_Netflix")
+            InlineKeyboardButton('• ᴀɴɪᴍᴇ ᴄʀᴜɪsᴇ •', url="https://t.me/infinity_uploads")
        ],[ 
             InlineKeyboardButton('• ʙᴀᴄᴋ •', callback_data='start')
         ]]
@@ -2158,7 +2158,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴄᴏᴍᴍᴀɴᴅs •', callback_data='main')
         ], [
             InlineKeyboardButton('• ᴅᴇᴠᴇʟᴏᴘᴇʀ', user_id=int(5533079371)),
-            InlineKeyboardButton('ɴᴇᴛᴡᴏʀᴋ •', url="t.me/otakuflix_network")
+            InlineKeyboardButton('ɴᴇᴛᴡᴏʀᴋ •', url="https://t.me/hd_movies_hub01/7")
         ], [
             InlineKeyboardButton('• ʙᴀᴄᴋ •', callback_data='start')
         ]]
@@ -2727,7 +2727,7 @@ async def auto_filter(client, msg, spoll=False):
                     ai_sts = await m.edit('ᴘʟᴇᴀꜱᴇ ᴡᴀɪᴛ, ʟᴜᴄʏ ɪꜱ ᴄʜᴇᴄᴋɪɴɢ ʏᴏᴜʀ ꜱᴘᴇʟʟɪɴɢ...')
                     is_misspelled = await ai_spell_check(chat_id = message.chat.id,wrong_name=search)
                     if is_misspelled:
-                        await ai_sts.edit(f'<b>✅ʟᴜᴄʏ sᴜɢɢᴇsᴛᴇᴅ <code> {is_misspelled}</code> \nsᴏ ɪᴍ sᴇᴀʀᴄʜɪɴɢ ғᴏᴛ <code>{is_misspelled}</code></b>')
+                        await ai_sts.edit(f'<b>✅ᴀɪ sᴜɢɢᴇsᴛᴇᴅ <code> {is_misspelled}</code> \nsᴏ ɪᴍ sᴇᴀʀᴄʜɪɴɢ ғᴏᴛ <code>{is_misspelled}</code></b>')
                         await asyncio.sleep(2)
                         message.text = is_misspelled
                         await ai_sts.delete()
