@@ -67,8 +67,8 @@ APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
 # ============================
 # MongoDB Configuration
 # ============================
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://professormpx:profbot26july@professor0.6iz9g0f.mongodb.net/?retryWrites=true&w=majority&appName=Professor0")
-DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://dqtfd:dqafsm06@dqaf.zp3r1sa.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "")
+DATABASE_URI2 = environ.get('DATABASE_URI2', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Professor0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'professor')
 
@@ -94,7 +94,7 @@ IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'inshorturl.com')
 SHORTLINK_API = environ.get('SHORTLINK_API', '1ddfca1b6d97992d09b8d3953bc92adea15ba913')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/links_tutorialbypp/33')  # Tutorial video link for opening shortlink website
-IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # ============================
 # Channel & Group Links Configuration
