@@ -195,11 +195,7 @@ async def next_page(bot, query):
         ]
 
 
-        btn.insert(0, 
-            [
-                InlineKeyboardButton("⇈ Sᴇʟᴇᴄᴛ Oᴘᴛɪᴏɴ Hᴇʀᴇ ⇈", 'reqinfo')
-            ]
-        )
+        
         btn.insert(0, 
             [ 
                 InlineKeyboardButton(f'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
@@ -215,11 +211,7 @@ async def next_page(bot, query):
 
     else:
         btn = []
-        btn.insert(0, 
-            [
-                InlineKeyboardButton("⇈ Sᴇʟᴇᴄᴛ Oᴘᴛɪᴏɴ Hᴇʀᴇ ⇈", 'reqinfo')
-            ]
-        )
+        
         btn.insert(0, 
             [
                 InlineKeyboardButton(f'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
@@ -447,11 +439,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
             ]
             for file in files
         ]
-        btn.insert(0, 
-            [
-                InlineKeyboardButton("⇈ Sᴇʟᴇᴄᴛ Oᴘᴛɪᴏɴ Hᴇʀᴇ ⇈", 'reqinfo')
-            ]
-        )
+        
         btn.insert(0, 
             [
                 InlineKeyboardButton(f'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
@@ -467,11 +455,7 @@ async def filter_qualities_cb_handler(client: Client, query: CallbackQuery):
 
     else:
         btn = []
-        btn.insert(0, 
-            [
-                InlineKeyboardButton("⇈ Sᴇʟᴇᴄᴛ Oᴘᴛɪᴏɴ Hᴇʀᴇ ⇈", 'reqinfo')
-            ]
-        )
+        
         btn.insert(0, 
             [
                 InlineKeyboardButton(f'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
@@ -614,11 +598,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
             ]
             for file in files
         ]
-        btn.insert(0, 
-            [
-                InlineKeyboardButton("⇈ Sᴇʟᴇᴄᴛ Oᴘᴛɪᴏɴ Hᴇʀᴇ ⇈", 'reqinfo')
-            ]
-        )
+        
         btn.insert(0, 
             [
                 InlineKeyboardButton(f'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
@@ -634,11 +614,7 @@ async def filter_languages_cb_handler(client: Client, query: CallbackQuery):
 
     else:
         btn = []
-        btn.insert(0, 
-            [
-                InlineKeyboardButton("⇈ Sᴇʟᴇᴄᴛ Oᴘᴛɪᴏɴ Hᴇʀᴇ ⇈", 'reqinfo')
-            ]
-        )
+        
         btn.insert(0, 
             [
                 InlineKeyboardButton(f'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
@@ -817,11 +793,7 @@ async def filter_seasons_cb_handler(client: Client, query: CallbackQuery):
         ])
     else:
         btn = []
-        btn.insert(0, 
-            [
-                InlineKeyboardButton("⇈ Sᴇʟᴇᴄᴛ Oᴘᴛɪᴏɴ Hᴇʀᴇ ⇈", 'reqinfo')
-            ]
-        )
+        
         btn.insert(0, 
             [
                 InlineKeyboardButton(f'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
@@ -2784,11 +2756,7 @@ async def auto_filter(client, msg, spoll=False):
             ]
             for file in files
         ]
-        btn.insert(0, 
-            [
-                InlineKeyboardButton("⇈ Sᴇʟᴇᴄᴛ Oᴘᴛɪᴏɴ Hᴇʀᴇ ⇈", 'reqinfo')
-            ]
-        )
+        
         btn.insert(0, 
             [
                 InlineKeyboardButton(f'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
@@ -2804,11 +2772,7 @@ async def auto_filter(client, msg, spoll=False):
 
     else:
         btn = []
-        btn.insert(0, 
-            [
-                InlineKeyboardButton("⇈ Sᴇʟᴇᴄᴛ Oᴘᴛɪᴏɴ Hᴇʀᴇ ⇈", 'reqinfo')
-            ]
-        )
+        
         btn.insert(0, 
             [
                 InlineKeyboardButton(f'Qᴜᴀʟɪᴛʏ', callback_data=f"qualities#{key}"),
