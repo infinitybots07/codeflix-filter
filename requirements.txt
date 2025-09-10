@@ -1,4 +1,3 @@
-# Core Dependencies
 aiofiles
 aiohttp
 bs4
@@ -68,4 +67,3 @@ git+https://github.com/Joelkb/cinemagoer
 # Other Tools
 apscheduler
 opencv-python-headless==4.8.1.78
-telegraph==2.2.0
