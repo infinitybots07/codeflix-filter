@@ -381,7 +381,12 @@ async def start(client, message):
                 f"ɢʀᴏᴜᴘ ɴᴀᴍᴇ : {group_name}"
                 f"#𝖛𝖊𝖗𝖎𝖋𝖞_𝖈𝖔𝖒𝖕𝖑𝖊𝖙𝖊𝖉"
             )
-            await client.send_message(chat_id=VERIFIED_LOG, text=lucy_message)
+            
+            try:
+                await client.send_message(chat_id=VERIFIED_LOG, text=lucy_message)
+            except Exception as e:
+                logging.error("Failed to send message to VERIFIED_LOG", exc_info=True)
+                pass  # Continue execution even if sending fails
 
         else:
             return await message.reply_text(
