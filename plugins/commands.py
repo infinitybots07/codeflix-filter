@@ -343,90 +343,90 @@ async def start(client, message):
             await asyncio.sleep(1) 
         return await sts.delete()
 
-elif data.split("-", 1)[0] == "verify":
-
-    try:
-        userid = data.split("-", 2)[1]
-        token = data.split("-", 3)[2]
-        fileid = data.split("-", 3)[3]
-    except Exception as e:
-        logging.error(f"Error parsing verify data: {e}")
-        return await message.reply_text("<b>Invalid link or Expired link !</b>")
-
-    if str(message.from_user.id) != str(userid):
-        return await message.reply_text(
-            "<b>Invalid link or Expired link !</b>",
-            protect_content=False
-        )
-
-    try:
-        is_valid = await check_token(client, userid, token)
-    except Exception as e:
-        logging.error(f"Error validating token: {e}")
-        return await message.reply_text("<b>Error validating token!</b>")
-
-    if is_valid == True:
-        btn = [[
-            InlineKeyboardButton(
-                "ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ғɪʟᴇ",
-                url=f"https://telegram.me/{temp.U_NAME}?start=files_{fileid}"
+    elif data.split("-", 1)[0] == "verify":
+    
+        try:
+            userid = data.split("-", 2)[1]
+            token = data.split("-", 3)[2]
+            fileid = data.split("-", 3)[3]
+        except Exception as e:
+            logging.error(f"Error parsing verify data: {e}")
+            return await message.reply_text("<b>Invalid link or Expired link !</b>")
+    
+        if str(message.from_user.id) != str(userid):
+            return await message.reply_text(
+                "<b>Invalid link or Expired link !</b>",
+                protect_content=False
             )
-        ]]
-
+    
         try:
-            await message.reply_photo(
-                photo="https://graph.org/file/6928de1539e2e80e47fb8.jpg",
-                caption=f"<blockquote><b>👋 ʜᴇʏ {message.from_user.mention}, ʏᴏᴜ'ʀᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴠᴇʀɪꜰɪᴇᴅ ✅\n\nɴᴏᴡ ʏᴏᴜ'ᴠᴇ ᴜɴʟɪᴍᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ {VERIFY_EXPIRE} ʜᴏᴜʀs🎉</blockquote></b>",
-                reply_markup=InlineKeyboardMarkup(btn)
+            is_valid = await check_token(client, userid, token)
+        except Exception as e:
+            logging.error(f"Error validating token: {e}")
+            return await message.reply_text("<b>Error validating token!</b>")
+    
+        if is_valid == True:
+            btn = [[
+                InlineKeyboardButton(
+                    "ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ғɪʟᴇ",
+                    url=f"https://telegram.me/{temp.U_NAME}?start=files_{fileid}"
+                )
+            ]]
+    
+            try:
+                await message.reply_photo(
+                    photo="https://graph.org/file/6928de1539e2e80e47fb8.jpg",
+                    caption=f"<blockquote><b>👋 ʜᴇʏ {message.from_user.mention}, ʏᴏᴜ'ʀᴇ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴠᴇʀɪꜰɪᴇᴅ ✅\n\nɴᴏᴡ ʏᴏᴜ'ᴠᴇ ᴜɴʟɪᴍᴇᴅ ᴀᴄᴄᴇꜱꜱ ғᴏʀ {VERIFY_EXPIRE} ʜᴏᴜʀs🎉</blockquote></b>",
+                    reply_markup=InlineKeyboardMarkup(btn)
+                )
+            except Exception as e:
+                logging.error(f"Error sending verification photo: {e}")
+    
+            # verify user
+            try:
+                await verify_user(client, userid, token)
+            except Exception as e:
+                logging.error(f"Error verifying user: {e}")
+    
+            # save db entry
+            try:
+                await vr_db.save_verification(message.from_user.id)
+            except Exception as e:
+                logging.error(f"Error saving verification to DB: {e}")
+    
+            user_id = int(user_id)  # kept as requested
+    
+            now = datetime.now()
+            current_time = now.strftime("%H:%M:%S")
+            current_date = now.strftime("%Y-%m-%d")
+    
+            try:
+                group = await client.get_chat(grp_id)
+                group_name = group.title if group else "ɢʀᴏᴜᴘ ɴᴏᴛ ꜰᴏᴜɴᴅ"
+            except Exception as e:
+                logging.error(f"Error fetching group name: {e}")
+                group_name = "ɢʀᴏᴜᴘ ɴᴏᴛ ꜰᴏᴜɴᴅ"
+    
+            lucy_message = (
+                f"ɴᴀᴍᴇ: {message.from_user.mention}\n"
+                f"ᴜꜱᴇʀ ɪᴅ : {user_id}"
+                f"ᴛɪᴍᴇ: {current_time}\n"
+                f"ᴅᴀᴛᴇ: {current_date}\n"
+                f"ɢʀᴏᴜᴘ ɴᴀᴍᴇ : {group_name}"
+                f"#𝖛𝖊𝖗𝖎𝖋𝖞_𝖈𝖔𝖒𝖕𝖑𝖊𝖙𝖊𝖉"
             )
-        except Exception as e:
-            logging.error(f"Error sending verification photo: {e}")
-
-        # verify user
-        try:
-            await verify_user(client, userid, token)
-        except Exception as e:
-            logging.error(f"Error verifying user: {e}")
-
-        # save db entry
-        try:
-            await vr_db.save_verification(message.from_user.id)
-        except Exception as e:
-            logging.error(f"Error saving verification to DB: {e}")
-
-        user_id = int(user_id)  # kept as requested
-
-        now = datetime.now()
-        current_time = now.strftime("%H:%M:%S")
-        current_date = now.strftime("%Y-%m-%d")
-
-        try:
-            group = await client.get_chat(grp_id)
-            group_name = group.title if group else "ɢʀᴏᴜᴘ ɴᴏᴛ ꜰᴏᴜɴᴅ"
-        except Exception as e:
-            logging.error(f"Error fetching group name: {e}")
-            group_name = "ɢʀᴏᴜᴘ ɴᴏᴛ ꜰᴏᴜɴᴅ"
-
-        lucy_message = (
-            f"ɴᴀᴍᴇ: {message.from_user.mention}\n"
-            f"ᴜꜱᴇʀ ɪᴅ : {user_id}"
-            f"ᴛɪᴍᴇ: {current_time}\n"
-            f"ᴅᴀᴛᴇ: {current_date}\n"
-            f"ɢʀᴏᴜᴘ ɴᴀᴍᴇ : {group_name}"
-            f"#𝖛𝖊𝖗𝖎𝖋𝖞_𝖈𝖔𝖒𝖕𝖑𝖊𝖙𝖊𝖉"
-        )
-
-        try:
-            await client.send_message(chat_id=VERIFIED_LOG, text=lucy_message)
-        except Exception as e:
-            logging.error(f"Error sending log message: {e}")
-
-    else:
-        return await message.reply_text(
-            "<b>Invalid link or Expired link !</b>",
-            protect_content=False
-        )
-
+    
+            try:
+                await client.send_message(chat_id=VERIFIED_LOG, text=lucy_message)
+            except Exception as e:
+                logging.error(f"Error sending log message: {e}")
+    
+        else:
+            return await message.reply_text(
+                "<b>Invalid link or Expired link !</b>",
+                protect_content=False
+            )
+    
     
     if data.startswith("sendfiles"):
         current_time = datetime.now(pytz.timezone(TIMEZONE))
