@@ -289,8 +289,8 @@ Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
 
     RESTART_TXT = """
-<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ !
-
+<b>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ ! #ʀᴇsᴛᴀʀᴛ
+• ๏[-ิ_•ิ]๏ {}
 • Dᴀᴛᴇ : <code>{}</code>
 • Tɪᴍᴇ : <code>{}</code>
 • Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code>
