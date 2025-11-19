@@ -375,10 +375,10 @@ async def start(client, message):
                 group_name = "ɢʀᴏᴜᴘ ɴᴏᴛ ꜰᴏᴜɴᴅ"
             lucy_message = (
                 f"ɴᴀᴍᴇ: {message.from_user.mention}\n"
-                f"ᴜꜱᴇʀ ɪᴅ : {user_id}"
+                #f"ᴜꜱᴇʀ ɪᴅ : {user_id}\n"
                 f"ᴛɪᴍᴇ: {current_time}\n"
                 f"ᴅᴀᴛᴇ: {current_date}\n"
-                f"ɢʀᴏᴜᴘ ɴᴀᴍᴇ : {group_name}"
+                #f"ɢʀᴏᴜᴘ ɴᴀᴍᴇ : {group_name}\n"
                 f"#𝖛𝖊𝖗𝖎𝖋𝖞_𝖈𝖔𝖒𝖕𝖑𝖊𝖙𝖊𝖉"
             )
             
