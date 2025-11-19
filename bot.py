@@ -94,11 +94,21 @@ async def Lucy_start():
     await web.TCPSite(app, bind_address, PORT).start()
     await idle()
     try:
-       await Codeflix.send_message(chat_id=SUPPORT_CHAT_ID, text=f"<b>{me.mention} Restarted🤖</b>")
-       for admin in ADMINS:
-           await Codeflix.send_message(chat_id=admin, text=f"<b>๏[-ิ_•ิ]๏ {me.mention} Restarted ✅</code></b>")
-    except:
+        await Codeflix.send_message(
+            chat_id=SUPPORT_CHAT_ID,
+            text=f"<b>{me.mention} Restarted🤖</b>"
+        )
+
+        for admin in ADMINS:
+            await Codeflix.send_message(
+                chat_id=admin,
+                text=f"<b>๏[-ิ_•ิ]๏ {me.mention} Restarted ✅</b>"
+            )
+
+    except Exception as e:
+        print(f"Error while sending restart message: {e}")
         pass
+
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     try:
