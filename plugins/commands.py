@@ -363,15 +363,22 @@ async def start(client, message):
                 reply_markup=InlineKeyboardMarkup(btn)
             )
             await verify_user(client, userid, token) 
-            await vr_db.save_verification(message.from_user.id) 
+            await vr_db.save_verification(message.from_user.id)
+            user_id = int(user_id) 
             now = datetime.now()
             current_time = now.strftime("%H:%M:%S")
             current_date = now.strftime("%Y-%m-%d")
-            
+            try:
+                group = await client.get_chat(grp_id)
+                group_name = group.title if group else "ɢʀᴏᴜᴘ ɴᴏᴛ ꜰᴏᴜɴᴅ"
+            except:
+                group_name = "ɢʀᴏᴜᴘ ɴᴏᴛ ꜰᴏᴜɴᴅ"
             lucy_message = (
                 f"ɴᴀᴍᴇ: {message.from_user.mention}\n"
+                f"ᴜꜱᴇʀ ɪᴅ : {user_id}"
                 f"ᴛɪᴍᴇ: {current_time}\n"
                 f"ᴅᴀᴛᴇ: {current_date}\n"
+                f"ɢʀᴏᴜᴘ ɴᴀᴍᴇ : {group_name}"
                 f"#𝖛𝖊𝖗𝖎𝖋𝖞_𝖈𝖔𝖒𝖕𝖑𝖊𝖙𝖊𝖉"
             )
             await client.send_message(chat_id=VERIFIED_LOG, text=lucy_message)
