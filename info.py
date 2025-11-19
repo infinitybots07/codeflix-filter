@@ -55,7 +55,7 @@ MULTI_FSUB = [int(channel_id) for channel_id in environ.get('MULTI_FSUB', '-1001
 # ============================
 # Payment Configuration
 # ============================
-QR_CODE = environ.get('QR_CODE', 'https://envs.sh/ShO.jpg')
+QR_CODE = environ.get('QR_CODE', 'https://i.ibb.co/0jPpzvsH/photo-2025-10-28-15-50-53-7566348365290536968.jpg')
 OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'Contact Owner')
 
 #Auto approve 
@@ -84,15 +84,17 @@ CAPTION_LANGUAGES = ["Bhojpuri", "Hindi", "Bengali", "Tamil", "English", "Bangla
 # ===========================
 VERIFY = bool(environ.get('VERIFY', True)) 
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 24))
-VERIFIED_LOG = int(environ.get('VERIFIED_LOG', '-1001868871195'))
+VERIFIED_LOG = int(environ.get('VERIFIED_LOG', '-1002043202934'))
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/links_tutorialbypp/33') 
 
 # ============================
 # Link Shortener Configuration
 # ============================
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'linkshortify.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'b3237ad42ea69827956a028d6c69c823941c6101')
+#SHORTLINK_URL = environ.get('SHORTLINK_URL', 'linkshortify.com')
+#SHORTLINK_API = environ.get('SHORTLINK_API', 'b3237ad42ea69827956a028d6c69c823941c6101')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'inshorturl.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '1ddfca1b6d97992d09b8d3953bc92adea15ba913')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/links_tutorialbypp/33')  # Tutorial video link for opening shortlink website
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
