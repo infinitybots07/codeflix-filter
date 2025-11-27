@@ -369,6 +369,7 @@ async def start(client, message):
             current_date = now.strftime("%Y-%m-%d")
             
             lucy_message = (
+                f"📌𝔭𝔯𝔬𝔣𝔢𝔰𝔰𝔬𝔯 𝔲𝔰𝔢𝔯 𝔳𝔢𝔯𝔦𝔣𝔦𝔠𝔞𝔱𝔦𝔬𝔫📌\n"
                 f"ɴᴀᴍᴇ: {message.from_user.mention}\n"
                 f"ᴛɪᴍᴇ: {current_time}\n"
                 f"ᴅᴀᴛᴇ: {current_date}\n"
