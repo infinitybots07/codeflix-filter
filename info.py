@@ -91,17 +91,17 @@ HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/links_tutorialbypp/33
 # Link Shortener Configuration
 # ============================
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
-#SHORTLINK_URL = environ.get('SHORTLINK_URL', 'linkshortify.com')
-#SHORTLINK_API = environ.get('SHORTLINK_API', 'b3237ad42ea69827956a028d6c69c823941c6101')
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'inshorturl.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', '1ddfca1b6d97992d09b8d3953bc92adea15ba913')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'linkshortify.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', 'b3237ad42ea69827956a028d6c69c823941c6101')
+#SHORTLINK_URL = environ.get('SHORTLINK_URL', 'inshorturl.com')
+#SHORTLINK_API = environ.get('SHORTLINK_API', '1ddfca1b6d97992d09b8d3953bc92adea15ba913')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/links_tutorialbypp/33')  # Tutorial video link for opening shortlink website
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 
 # ============================
 # Channel & Group Links Configuration
 # ============================
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+goYMUygBL383ZTc8')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+Zf92_WuBV2Y5YTBk') # devil afk movies and series grp =plus mes
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/hd_movies_hub01')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/talk_mrs_bot')
 MOVIE_UPDATE_CHANNEL_LNK = environ.get('MOVIE_UPDATE_CHANNEL_LNK', 'https://t.me/infinity_botzz')
@@ -117,13 +117,14 @@ PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in envir
 # ============================
 # Miscellaneous Configuration
 # ============================
-NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))  # True if you want no results messages in Log Channel
+NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))
+NO_RESULTS_CHANNEL = int(environ.get("NO_RESULTS_CHANNEL", "-1002844209582"))
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
 MSG_ALRT = environ.get('MSG_ALRT', 'sʜᴀʀᴇ ᴀɴᴅ sᴜᴘᴘᴏʀᴛ ᴜs')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://telegram.me/+JWsoDEJEB9EyNDU1')  # Support group link (make sure bot is admin)
-P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
+P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "True")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
@@ -136,7 +137,7 @@ LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False")
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002844209582')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), True)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
