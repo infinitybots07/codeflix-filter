@@ -499,7 +499,16 @@ def get_readable_time(seconds):
         if seconds >= period_seconds:
             period_value, seconds = divmod(seconds, period_seconds)
             result.append(f'{int(period_value)}{period_name}')
-    return ' '.join(result)  
+    return ' '.join(result)
+
+def infinity_time(seconds):
+    periods = [('ᴅᴀʏꜱ', 86400), ('ʜᴏᴜʀꜱ', 3600), ('ᴍɪɴᴜᴛᴇꜱ', 60), ('ꜱᴇᴄᴏɴᴅꜱ', 1)]
+    result = []
+    for period_name, period_seconds in periods:
+        if seconds >= period_seconds:
+            period_value, seconds = divmod(seconds, period_seconds)
+            result.append(f'{int(period_value)} {period_name}')
+    return ' '.join(result) if result else "0 ꜱᴇᴄᴏɴᴅꜱ" 
 
 async def get_shortlink(chat_id, link):
     settings = await get_settings(chat_id) #fetching settings for group
