@@ -88,13 +88,13 @@ async def Lucy_start():
     now = datetime.now(tz)
     time = now.strftime("%H:%M:%S %p")
     await Codeflix.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(temp.B_LINK, today, time ))
-#try:
-    await Codeflix.send_message(chat_id=SUPPORT_CHAT_ID, text=f"<b>{me.mention} Restarted🤖</b>")
-    for admin in ADMINS:
-        await Codeflix.send_message(chat_id=admin, text=f"<b>๏[-ิ_•ิ]๏ {me.mention} Restarted ✅</b>")
-#except Exception as e:
-#    print(f"Error while sending restart message: {e}")
-#    pass
+    try:
+        await Codeflix.send_message(chat_id=SUPPORT_CHAT_ID, text=f"<b>{me.mention} Restarted🤖</b>")
+        for admin in ADMINS:
+            await Codeflix.send_message(chat_id=admin, text=f"<b>๏[-ิ_•ิ]๏ {me.mention} Restarted ✅</b>")
+    except Exception as e:
+        print(f"Error while sending restart message: {e}")
+        pass
     app = web.AppRunner(await web_server())
     await app.setup()
     bind_address = "0.0.0.0"
