@@ -88,11 +88,6 @@ async def Lucy_start():
     now = datetime.now(tz)
     time = now.strftime("%H:%M:%S %p")
     await Codeflix.send_message(chat_id=LOG_CHANNEL, text=script.RESTART_TXT.format(temp.B_LINK, today, time ))
-    app = web.AppRunner(await web_server())
-    await app.setup()
-    bind_address = "0.0.0.0"
-    await web.TCPSite(app, bind_address, PORT).start()
-    await idle()
 #try:
     await Codeflix.send_message(chat_id=SUPPORT_CHAT_ID, text=f"<b>{me.mention} Restarted🤖</b>")
     for admin in ADMINS:
@@ -100,6 +95,11 @@ async def Lucy_start():
 #except Exception as e:
 #    print(f"Error while sending restart message: {e}")
 #    pass
+    app = web.AppRunner(await web_server())
+    await app.setup()
+    bind_address = "0.0.0.0"
+    await web.TCPSite(app, bind_address, PORT).start()
+    await idle()
 
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
