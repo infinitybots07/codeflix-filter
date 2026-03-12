@@ -197,9 +197,9 @@ Nᴀᴍᴇ - {}
 
 <b>🎉 𝑺𝒆𝒍𝒆𝒄𝒕 𝒀𝒐𝒖𝒓 𝑫𝒐𝒏𝒂𝒕𝒆 𝑴𝒆𝒕𝒉𝒐𝒅 👇</b>
 
-➢ QR Cᴏᴅᴇ : <a href='https://envs.sh/_NU.jpg'>𝑪𝑳𝑰𝑪𝑲 𝑯𝑬𝑹𝑬 𝑻𝑶 𝑺𝑪𝑨𝑵</a>
+➢ QR Cᴏᴅᴇ : <a href='https://i.ibb.co/zTrhV783/photo-2025-10-28-15-50-27-7566348352405635092.jpg'>𝑪𝑳𝑰𝑪𝑲 𝑯𝑬𝑹𝑬 𝑻𝑶 𝑺𝑪𝑨𝑵</a>
 
-➢ Uᴘɪ Iᴅ : <code>mrparadox007@ybl</code>
+➢ Uᴘɪ Iᴅ : Contact @talk_mrs_bot
 
 ‼️ 𝑴𝒖𝒔𝒕 𝑺𝒆𝒏𝒅 𝑺𝒄𝒓𝒆𝒆𝒏𝒔𝒉𝒐𝒕 𝑨𝒇𝒕𝒆𝒓 𝑫𝒐𝒏𝒂𝒕𝒆.</b>"""
     
@@ -302,9 +302,7 @@ Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
 • Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code> v4.7 [ Sᴛᴀʙʟᴇ ]</code>
 </b>"""
 
-    LOGO = """
-
-BOT WORKING PROPERLY"""
+    LOGO = """Bot Working Properly"""
 
     #PLANS
 

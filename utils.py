@@ -248,14 +248,14 @@ async def save_group_settings(group_id, key, value):
     
 def get_size(size):
     """Get size in readable format"""
-
-    units = ["Bytes", "KB", "MB", "GB", "TB", "PB", "EB"]
+    #units = ["ᴮʸᵗᵉˢ", "ᴷᴮ", "ᴹᴮ", "ᴳᴮ", "ᵀᴮ", "ᴾᴮ", "ᴱᴮ"]
+    units = ["Bytes", "ᴷᴮ",  "ᴹᴮ", "ᴳᴮ", "TB", "PB", "EB"]
     size = float(size)
     i = 0
     while size >= 1024.0 and i < len(units):
         i += 1
         size /= 1024.0
-    return "%.2f %s" % (size, units[i])
+    return "%.2f%s" % (size, units[i])
 
 def split_list(l, n):
     for i in range(0, len(l), n):
