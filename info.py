@@ -91,8 +91,8 @@ HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', 'https://t.me/links_tutorialbypp/33
 # Link Shortener Configuration
 # ============================
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'linkshortify.com')
-SHORTLINK_API = environ.get('SHORTLINK_API', 'b3237ad42ea69827956a028d6c69c823941c6101')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', 'indiaearnx.com')
+SHORTLINK_API = environ.get('SHORTLINK_API', '4efa5371846bc9d04b47304acfd8d72636009021')
 #SHORTLINK_URL = environ.get('SHORTLINK_URL', 'inshorturl.com')
 #SHORTLINK_API = environ.get('SHORTLINK_API', '1ddfca1b6d97992d09b8d3953bc92adea15ba913')
 TUTORIAL = environ.get('TUTORIAL', 'https://t.me/links_tutorialbypp/33')  # Tutorial video link for opening shortlink website
